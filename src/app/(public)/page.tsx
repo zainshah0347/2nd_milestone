@@ -391,7 +391,7 @@ export default function Home() {
   const projectsImages = [
     { project1Url: "/images/project1.jpg", project2Url: "/images/project2.jpg" },
     { project1Url: "/images/project3.jpg", project2Url: "/images/project4.jpg" },
-    { project1Url: "/images/project5.jpg", project2Url: '/images/project6.jpg'},
+    { project1Url: "/images/project5.jpg", project2Url: '/images/project6.jpg' },
   ];
 
   const skills = [
@@ -405,7 +405,7 @@ export default function Home() {
     <div>
       {/* Hero Section */}
       <div className="w-full h-full flex flex-col md:flex-row">
-      <div className="w-full md:w-1/2 bg-[#ECEEEC] flex justify-center md:justify-end p-6 md:pr-10 md:items-end md:pb-24">
+        <div className="w-full md:w-1/2 bg-[#ECEEEC] flex justify-center md:justify-end p-6 md:pr-10 md:items-end md:pb-24">
           <div className="space-y-6 md:space-y-10 pt-24 md:pt-44">
             <div>
               <span className="text-[#CA3F1D] text-sm md:text-[20px] font-semibold tracking-widest">
@@ -454,47 +454,9 @@ export default function Home() {
           </div>
         </div>
 
-      {/* Experience, Skills Section */}
-      <div className="flex flex-col md:flex-row md:justify-between mt-10 md:mt-20 gap-10 md:gap-0">
-      {/* Experience Section */}
-      <div className="w-full md:w-1/3">
-            <h1 className="border-l-4 border-[#C93F1D] pl-3 text-2xl md:text-3xl font-serif mb-6 text-[#211A1A]">
-              Experience
-            </h1>
-            {experienceData.map((items, index) => {
-              const { h3, p } = items;
-              return (
-                <div key={index} className="mb-5">
-                  <h3 className="text-lg md:text-[21px] font-semibold text-[#211A1A]">
-                    {h3}
-                  </h3>
-                  <p className="text-sm md:text-[17px] text-[#7E7D7C]">{p}</p>
-                </div>
-              );
-            })}
-          </div>
 
-      {/* Skills Section */}
-      <div className="w-full md:w-1/3">
-            <h1 className="border-l-4 border-[#C93F1D] pl-3 text-2xl md:text-3xl font-serif mb-6 text-[#211A1A]">
-              Skills
-            </h1>
-            {skillsData.map((items, index) => {
-              const { h3 } = items;
-              return (
-                <div key={index} className="mb-5">
-                  <h3 className="text-lg md:text-[21px] font-semibold text-[#211A1A]">
-                    {h3}
-                  </h3>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </div>
-
-      {/* Skills Icons Section */}
-      { <div className="mt-16 md:mt-28 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 px-6 md:px-20">
+           {/* Skills Icons Section */}
+      {<div className="mt-16 md:mt-28 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 px-6 md:px-20">
         {skills.map((items, index) => {
           const { url1, url2, title1, title2 } = items;
           return (
@@ -512,20 +474,63 @@ export default function Home() {
         })}
       </div>}
 
+        {/* Experience, Skills Section */}
+        {/* <div className="flex flex-col md:flex-row md:justify-between mt-10 md:mt-20 gap-10 md:gap-0"> */}
+          {/* Experience Section */}
+          {/* <div className="w-full md:w-1/3">
+            <h1 className="border-l-4 border-[#C93F1D] pl-3 text-2xl md:text-3xl font-serif mb-6 text-[#211A1A]">
+              Experience
+            </h1>
+            {experienceData.map((items, index) => {
+              const { h3, p } = items;
+              return (
+                <div key={index} className="mb-5">
+                  <h3 className="text-lg md:text-[21px] font-semibold text-[#211A1A]">
+                    {h3}
+                  </h3>
+                  <p className="text-sm md:text-[17px] text-[#7E7D7C]">{p}</p>
+                </div>
+              );
+            })}
+          </div> */}
+
+          {/* Skills Section */}
+          {/* <div className="w-full md:w-1/3">
+            <h1 className="border-l-4 border-[#C93F1D] pl-3 text-2xl md:text-3xl font-serif mb-6 text-[#211A1A]">
+              Skills
+            </h1>
+            {skillsData.map((items, index) => {
+              const { h3 } = items;
+              return (
+                <div key={index} className="mb-5">
+                  <h3 className="text-lg md:text-[21px] font-semibold text-[#211A1A]">
+                    {h3}
+                  </h3>
+                </div>
+              );
+            })}
+          </div>
+        </div> */}
+      </div>
+
+   
+
 
       {/* Works Section */}
-      {/* <div>
-      <div className="bg-[#FBFCFB] px-6 md:px-20">
+      <div>
+        <div className="bg-[#FBFCFB] px-6 md:px-20">
           <div className="mb-28 pt-[224px]" id="projects">
             <h1 className="font-serif text-4xl md:text-[50px] ml-8 text-[#211A1A]">Projects.</h1>
-            <div className="mt-16 md:mt-28 grid grid-cols sm:grid-cols-2 lg:grid-cols-2 gap-6">
+
+            <div className="mt-16 md:mt-28 grid grid-cols-1 sm:grid-cols-2 gap-6">
               {projectsImages.map((items, index) => {
                 const { project1Url, project2Url } = items;
                 return (
-                  <div className="grid justify-center items-center gap-8" key={index}>
+                  <React.Fragment key={index}>
+                    {/* Project 1 Image */}
                     <div
                       data-aos="fade-up"
-                      className="w-full h-[300px] md:h-[400px] lg:h-[400px] rounded-lg shadow-lg grid-cols-1"
+                      className="relative w-full h-[250px] md:h-[350px] lg:h-[400px] rounded-lg shadow-lg"
                     >
                       <Image
                         src={project1Url}
@@ -535,10 +540,12 @@ export default function Home() {
                         className="rounded-lg"
                       />
                     </div>
+
+                    {/* Project 2 Image */}
                     <div
                       data-aos="fade-up"
                       data-aos-delay="100"
-                      className="relative w-full h-[300px] md:h-[400px] lg:h-[400px] rounded-lg  shadow-lg grid-cols-2"
+                      className="relative w-full h-[250px] md:h-[350px] lg:h-[400px] rounded-lg shadow-lg"
                     >
                       <Image
                         src={project2Url}
@@ -548,61 +555,15 @@ export default function Home() {
                         className="rounded-lg"
                       />
                     </div>
-                  </div>
+                  </React.Fragment>
                 );
               })}
             </div>
           </div>
         </div>
-      </div> */}
-
-<div>
-  <div className="bg-[#FBFCFB] px-6 md:px-20">
-    <div className="mb-28 pt-[224px]" id="projects">
-      <h1 className="font-serif text-4xl md:text-[50px] ml-8 text-[#211A1A]">Projects.</h1>
-      
-      <div className="mt-16 md:mt-28 grid grid-cols-1 sm:grid-cols-2 gap-6">
-        {projectsImages.map((items, index) => {
-          const { project1Url, project2Url } = items;
-          return (
-            <React.Fragment key={index}>
-              {/* Project 1 Image */}
-              <div
-                data-aos="fade-up"
-                className="relative w-full h-[250px] md:h-[350px] lg:h-[400px] rounded-lg shadow-lg"
-              >
-                <Image
-                  src={project1Url}
-                  alt="Project 1"
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-lg"
-                />
-              </div>
-
-              {/* Project 2 Image */}
-              <div
-                data-aos="fade-up"
-                data-aos-delay="100"
-                className="relative w-full h-[250px] md:h-[350px] lg:h-[400px] rounded-lg shadow-lg"
-              >
-                <Image
-                  src={project2Url}
-                  alt="Project 2"
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-lg"
-                />
-              </div>
-            </React.Fragment>
-          );
-        })}
       </div>
-    </div>
-  </div>
-</div>
 
-<div className="bg-[#1A1A1A] px-6 md:px-20 pt-20">
+      <div className="bg-[#1A1A1A] px-6 md:px-20 pt-20">
         <div className="flex flex-col" id="contact">
           <h1 className="font-serif text-4xl md:text-[50px] text-white pb-10 md:pb-24 text-center">Get In Touch.</h1>
           <div className="flex flex-col md:flex-row gap-8 md:gap-20 w-full">
@@ -634,7 +595,7 @@ export default function Home() {
                   })}
                 </div>
 
-                 {/* Contact Me Section */}
+                {/* Contact Me Section */}
                 {contactMeList.map((items, index) => {
                   const { email, phoneNumber } = items;
                   return (
@@ -664,7 +625,7 @@ export default function Home() {
         className="fixed bottom-8 right-8 z-50 bg-[#CA3F1D] text-white p-3 md:p-4 rounded-full shadow-lg focus:outline-none transition-transform duration-300 hover:scale-110"
       >
         <KeyboardArrowUpIcon fontSize="large" />
-      </button> 
+      </button>
 
 
 
@@ -672,7 +633,7 @@ export default function Home() {
 
 
 
-      
-      </div>
-      )
+
+    </div>
+  )
 }
