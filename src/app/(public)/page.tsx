@@ -94,10 +94,13 @@ export default function Home() {
           <h1 className="font-serif text-4xl md:text-[50px] text-[#211A1A]">About Me.</h1>
           <div className="flex flex-col gap-6 md:gap-10 mt-10 md:mt-20">
             <p className="text-lg md:text-[24px] tracking-wider leading-relaxed text-[#1A253E]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas explicabo id debitis cupiditate cumque, error quia! Debitis cupiditate ipsa nihil labore, earum atque dolor quos saepe vero inventore, odit nam deleniti accusantium omnis mollitia consequatur harum incidunt! Ex modi aut repudiandae doloremque commodi recusandae labore sit. Perspiciatis omnis dolor dolores fuga iusto, recusandae animi nisi consequuntur exercitationem id maxime earum pariatur voluptas! Porro non quos quae tempora fuga quis sequi minus sed sint debitis reiciendis, nostrum natus suscipit iusto odio.
+              Hello! I'm Muhammad Zain, and I'm passionate about building interactive, friendly user web experiences as a Junior Web Developer.
+              Started off this recent journey into web development with a sound footing in HTML, CSS, JavaScript, and cross-technological frameworks
+              like React and Next.js. So my day-to-day commitment is learning, exploring, and expanding my skills through each obstacle.
             </p>
             <p className="text-lg md:text-[24px] tracking-wider text-[#1A253E] leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit. Ut enim ad minim.
+              Solve problems, have fun building clean and efficient code that can go beyond expectations, and create meaningful projects while
+              contributing to the development of my technical skills and impacts the digital solution of others.
             </p>
           </div>
         </div>
@@ -113,22 +116,22 @@ export default function Home() {
             </h1>
             {
               <div className="mt-16 md:mt-28 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 px-6 md:px-20">
-              {skills.map((items, index) => {
-                const { url1, url2, title1, title2 } = items;
-                return (
-                  <div className="flex justify-center items-center gap-8 flex-wrap" key={index}>
-                    <div className="w-[150px] h-[150px] relative rounded-lg shadow-lg overflow-hidden">
-                      <Image src={url1} alt={title1} layout="fill" objectFit="cover" className="rounded-lg" />
-                      <h2 className="absolute bottom-2 left-2 text-white bg-black px-2 py-1 rounded">{title1}</h2>
+                {skills.map((items, index) => {
+                  const { url1, url2, title1, title2 } = items;
+                  return (
+                    <div className="flex justify-center items-center gap-8 flex-wrap" key={index}>
+                      <div className="w-[150px] h-[150px] relative rounded-lg shadow-lg overflow-hidden">
+                        <Image src={url1} alt={title1} layout="fill" objectFit="cover" className="rounded-lg" />
+                        <h2 className="absolute bottom-2 left-2 text-white bg-black px-2 py-1 rounded">{title1}</h2>
+                      </div>
+                      <div className="w-[150px] h-[150px] relative rounded-lg shadow-lg overflow-hidden">
+                        <Image src={url2} alt={title2} layout="fill" objectFit="cover" className="rounded-lg" />
+                        <h2 className="absolute bottom-2 left-2 text-white bg-black px-2 py-1 rounded">{title2}</h2>
+                      </div>
                     </div>
-                    <div className="w-[150px] h-[150px] relative rounded-lg shadow-lg overflow-hidden">
-                      <Image src={url2} alt={title2} layout="fill" objectFit="cover" className="rounded-lg" />
-                      <h2 className="absolute bottom-2 left-2 text-white bg-black px-2 py-1 rounded">{title2}</h2>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
+                  );
+                })}
+              </div>
             }
           </div>
         </div>
